@@ -50,4 +50,16 @@ public class ManagerTest {
         assertEquals(28000.00, manager.getSalary(), 0.001);
     }
 
+    @Test
+    public void canChangeName() {
+        manager.setName("Boss Bob");
+        assertEquals("Boss Bob", manager.getName());
+    }
+
+    @Test
+    public void wontAcceptNullValueWhenChangingName() {
+        manager.setName("");
+        assertEquals("Boss Brian", manager.getName());
+    }
+
 }
